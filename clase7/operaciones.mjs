@@ -1,0 +1,10 @@
+export function sumar(a, b){
+    return a + b;
+}
+
+export function dividir(a,b){
+    if (b===0){
+        throw "No se permite dividir entre 0"
+    }
+    return a/b
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    .cita {
+        font-size:20px;
+    }
+    /* ::before y ::after — contenido generado */
+    .cita::before {
+         content: "« "; 
+         color: gray; 
+     }
+    .cita::after  { 
+        content: " »"; 
+        color: gray; 
+        background-color: aqua;
+    }
+    .cita::selection { 
+        background: mediumseagreen; 
+        font-size: 30px;
+        color: white; 
+    }
+    .my-input {
+        border-radius: 3px;
+    }
+
+    .my-input::placeholder {
+        font-size: 5px;
+    }
+    </style>
+</head>
+<body>
+    <p class="cita">Hola estudaintes</p>
+
+    <input class="my-input" placeholder="Ingresa tu nombre" />
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items:  center;
+}
+
+.cols { 
+    display: flex; 
+    gap: 20px; 
+    background-color: aqua;
+}
+.cols > * { 
+    flex: 1; 
+}
+
+.cols > a {
+    background-color: red;
+}
+
+</style>
+</head>
+
+<body>
+    <navbar class="navbar">
+        <div class="cols">
+            <a href="">LOGO</a>
+            <a href="#">Inicio</a>
+            <a href="#">Productos</a>
+            <a href="#">Contacto</a>
+            <a href="#">Soporte</a>
+        </div>
+    </navbar>
+</body>
+</html>

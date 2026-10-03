@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    .container{
+        width: 100%;
+        background-color: red;
+    }
+
+    .inner-el {
+        background-color: blue;
+        width: 50%;
+        position: relative;
+        top: 0px;
+        left:67px;
+    }
+    .absolute{
+        position: absolute;
+        top: 65px;
+        left: 70px;
+    }
+
+    .fixed {
+        position: fixed;
+        bottom: 10px;
+        left: 50%;
+    }
+</style>
+
+<script>
+    // document.addEventListener("DOMContentLoaded", ()=>{
+    // let i = 0;
+    // let el = document.getElementById("inner")
+    // let init = 0;
+    // const int = setInterval(()=>{
+    //     init += 10
+    //     el.style.width = init.toString() +"%"
+    // }, 100)
+    // })
+
+</script>
+<body>
+    
+    <div>Hola soy un div</div><div style="display:none">Hola soy un div2</div><div>Hola soy un div3</div>
+
+    <span>Hola soy un span</span><span>Hola soy un span2</span>
+
+    <div class="container">
+        <div class="inner-el" id="inner">Hola container</div>
+    </div>
+
+    <div class="absolute">
+        Hola soy absoluto
+    </div>
+    <div class="fixed">Hola estoy fijo</div>
+
+</body>
+</html>

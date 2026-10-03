@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and drop</title>
+
+    <style>
+        .box {
+            background-color: aqua;
+            padding:5px;
+            margin:5px;
+        }
+        .item{
+            color:red;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="item" id="caja" draggable="true">Arrástrame</div>
+    <div class="item" id="caja2" draggable="true">Arrástrame 2</div>
+    <div class="box" id="destino">Suéltame aquí <span id="span"></span> </div>
+
+    <script>
+        const caja = document.getElementById('caja')
+        const destino = document.getElementById('destino')
+        const caja2 = document.getElementById('caja2')
+        
+        caja.addEventListener("dragstart", e => {
+            e.dataTransfer.setData("text/plain", "id-1");
+        });
+
+        caja2.addEventListener("dragstart", e => {
+            e.dataTransfer.setData("text/plain", "id-2");
+        });
+
+        destino.addEventListener("dragover", e => e.preventDefault());
+
+        destino.addEventListener("drop", e => {
+            e.preventDefault();
+            const id = e.dataTransfer.getData("text/plain");
+            destino.querySelector("#span").innerText = id
+            console.log("Soltado:", id);
+        });
+
+    </script>
+</body>
+</html>

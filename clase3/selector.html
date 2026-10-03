@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ /* Descendiente (espacio) — todos los p dentro de article */
+article p { line-height: 1.6; }
+
+/* Hijo directo (>) — solo los p hijos directos de article */
+article > p { font-weight: bold; }
+
+/* Hermano adyacente (+) — el p inmediatamente después de h2 */
+h2 + p { margin-top: 0; color:red; }
+
+/* Hermanos generales (~) — todos los p después de h2 */
+h2 ~ p { color: blue; }
+    </style>
+</head>
+<body>
+    <article>
+  <h2>Título</h2>
+  <p>Hijo directo ✓</p>
+  <div>
+    <p>Descendiente (no hijo directo) ✓</p>
+  </div>
+  <p>Otro hermano de h2 ✓</p>
+</article>
+</body>
+</html>

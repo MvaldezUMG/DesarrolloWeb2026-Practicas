@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <dialog id="dlg">
+  <h3>¿Confirmas?</h3>
+  <form method="dialog">
+    <label for="name">Nombre</label>
+    <input type="text" required id="name" name="name" />
+    <button value="ok">Aceptar</button>
+    <button value="cancel">Cancelar</button>
+  </form>
+</dialog>
+
+<button onclick="dlg.showModal()">
+  Abrir
+</button>
+
+<button command="show-modal" commandfor="dlg">
+  Abrir con command API
+</button>
+
+
+<button popovertarget="menu">
+  ☰ Menú
+</button>
+
+<ul id="menu" popover>
+  <li><a href="/">Inicio</a></li>
+  <li><a href="/blog">Blog</a></li>
+</ul>
+
+</body>
+</html>
